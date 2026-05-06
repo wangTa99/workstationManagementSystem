@@ -47,12 +47,6 @@
 | Axios      | HTTP框架 | https://axios-http.com   |
 | Element UI | UI框架   | https://element.eleme.cn |
 
-### 小程序技术栈
-
-| 技术       | 说明       | 官网                                                       |
-| ---------- | ---------- | ---------------------------------------------------------- |
-| 微信小程序 | 小程序框架 | https://developers.weixin.qq.com/miniprogram/dev/framework |
-
 ---
 
 ## 功能描述
