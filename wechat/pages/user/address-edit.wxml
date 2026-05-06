@@ -1,0 +1,64 @@
+<view class="address-edit-page">
+  <view class="form-section">
+    <!-- 联系人 -->
+    <view class="form-item">
+      <text class="form-label">联系人</text>
+      <input
+        class="form-input"
+        placeholder="请输入收货人姓名"
+        value="{{consignee}}"
+        bindinput="onConsigneeInput"
+      />
+    </view>
+
+    <!-- 手机号 -->
+    <view class="form-item">
+      <text class="form-label">手机号</text>
+      <input
+        class="form-input"
+        type="number"
+        maxlength="11"
+        placeholder="请输入手机号"
+        value="{{phone}}"
+        bindinput="onPhoneInput"
+      />
+    </view>
+
+    <!-- 省市区 -->
+    <view class="form-item" bindtap="onRegionTap">
+      <text class="form-label">所在地区</text>
+      <text class="region-value">{{province || '请选择'}}</text>
+      <text class="arrow">></text>
+    </view>
+
+    <!-- 详细地址 -->
+    <view class="form-item">
+      <text class="form-label">详细地址</text>
+      <input
+        class="form-input"
+        placeholder="请输入详细地址"
+        value="{{detail}}"
+        bindinput="onDetailInput"
+      />
+    </view>
+
+    <!-- 设为默认 -->
+    <view class="form-item default-row">
+      <text class="form-label">设为默认</text>
+      <switch checked="{{isDefault}}" bindchange="onDefaultChange" color="#1989fa" />
+    </view>
+  </view>
+
+  <!-- 保存按钮 -->
+  <view class="save-btn-wrap">
+    <button class="save-btn" bindtap="onSave">保存</button>
+  </view>
+
+  <!-- 地区选择弹窗 -->
+  <van-popup show="{{showRegionPicker}}" position="bottom" round>
+    <van-area
+      bind:confirm="onRegionConfirm"
+      bind:cancel="showRegionPicker = false"
+    />
+  </van-popup>
+</view>

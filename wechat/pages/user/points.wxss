@@ -1,0 +1,115 @@
+/**
+ * 积分页面样式
+ * @联系作者：16768118056
+ * @描述：（此项目非免费分享）源码百分百可用，搞定毕设不发愁，支持远程调试安装、二次开发、定制、讲解、文档类。
+ * @访问：https://www.notmaker.com/detail/8525d865acb24d55890cc81245135363/gtt20260415，查看完整运行演示。
+ */
+
+.points-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* 积分卡片 */
+.points-card {
+  background: linear-gradient(135deg, #1989fa, #409eff);
+  padding: 60rpx 30rpx;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance-label {
+  display: block;
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+.balance-value {
+  display: block;
+  font-size: 72rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+
+.sign-btn {
+  background-color: #fff;
+  color: #1989fa;
+  font-size: 28rpx;
+  padding: 20rpx 40rpx;
+  border-radius: 44rpx;
+  border: none;
+}
+
+.sign-btn::after {
+  border: none;
+}
+
+/* 积分记录 */
+.records-section {
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.section-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.records-list {
+  padding: 0 30rpx;
+}
+
+.record-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.record-item:last-child {
+  border-bottom: none;
+}
+
+.record-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.record-title {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.record-time {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 8rpx;
+}
+
+.record-change {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.record-change.add {
+  color: #07c160;
+}
+
+.record-change.reduce {
+  color: #ee0a24;
+}
+
+/* 空状态 */
+.empty {
+  text-align: center;
+  padding: 100rpx 0;
+  font-size: 28rpx;
+  color: #999;
+}

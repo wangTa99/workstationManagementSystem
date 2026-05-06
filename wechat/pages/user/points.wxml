@@ -1,0 +1,31 @@
+<view class="points-page">
+  <!-- 积分卡片 -->
+  <view class="points-card">
+    <view class="points-balance">
+      <text class="balance-label">我的积分</text>
+      <text class="balance-value">{{balance}}</text>
+    </view>
+    <button class="sign-btn" bindtap="onSignIn">每日签到</button>
+  </view>
+
+  <!-- 积分记录 -->
+  <view class="records-section">
+    <text class="section-title">积分明细</text>
+    <view class="records-list">
+      <view wx:for="{{records}}" wx:key="id" class="record-item">
+        <view class="record-info">
+          <text class="record-title">{{item.title}}</text>
+          <text class="record-time">{{formatTime(item.createTime)}}</text>
+        </view>
+        <text class="record-change {{item.change > 0 ? 'add' : 'reduce'}}">
+          {{formatAmount(item.change)}}
+        </text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:if="{{!loading && records.length === 0}}" class="empty">
+    <text>暂无积分记录</text>
+  </view>
+</view>

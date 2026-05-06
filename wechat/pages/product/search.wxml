@@ -1,0 +1,78 @@
+<view class="search-page">
+  <!-- 搜索框 -->
+  <view class="search-bar">
+    <input
+      class="search-input"
+      type="text"
+      placeholder="搜索商品"
+      value="{{keyword}}"
+      bindinput="onSearchInput"
+      bindconfirm="onSearch"
+    />
+    <text class="search-btn" bindtap="onSearch">搜索</text>
+  </view>
+
+  <!-- 搜索历史 -->
+  <view wx:if="{{searchHistory.length > 0 && products.length === 0}}" class="history-section">
+    <view class="section-header">
+      <text class="section-title">搜索历史</text>
+      <text class="clear-btn" bindtap="onClearHistory">清空</text>
+    </view>
+    <view class="keyword-list">
+      <text
+        wx:for="{{searchHistory}}"
+        wx:key="index"
+        class="keyword-item"
+        bindtap="onKeywordClick"
+        data-keyword="{{item}}"
+      >
+        {{item}}
+      </text>
+    </view>
+  </view>
+
+  <!-- 热门关键词 -->
+  <view wx:if="{{products.length === 0}}" class="hot-section">
+    <text class="section-title">热门搜索</text>
+    <view class="keyword-list">
+      <text
+        wx:for="{{hotKeywords}}"
+        wx:key="index"
+        class="keyword-item hot"
+        bindtap="onKeywordClick"
+        data-keyword="{{item}}"
+      >
+        {{item}}
+      </text>
+    </view>
+  </view>
+
+  <!-- 搜索结果 -->
+  <view wx:if="{{products.length > 0}}" class="result-section">
+    <view class="product-grid">
+      <view
+        wx:for="{{products}}"
+        wx:key="id"
+        class="product-item"
+        bindtap="onGoodsClick"
+        data-id="{{item.id}}"
+      >
+        <image class="product-image" src="{{item.thumb}}" mode="aspectFill" />
+        <view class="product-info">
+          <text class="product-name">{{item.name}}</text>
+          <text class="product-price">¥{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:if="{{!loading && products.length === 0 && keyword}}" class="empty">
+    <text>未找到相关商品</text>
+  </view>
+
+  <!-- 加载状态 -->
+  <view wx:if="{{loading}}" class="loading">
+    <text>加载中...</text>
+  </view>
+</view>

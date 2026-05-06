@@ -1,0 +1,38 @@
+<view class="pay-page">
+  <!-- 订单金额 -->
+  <view class="amount-section">
+    <text class="amount-label">支付金额</text>
+    <text class="amount-value">¥{{order.totalAmount}}</text>
+    <text class="countdown">剩余支付时间：{{formatTime(countdown)}}</text>
+  </view>
+
+  <!-- 订单信息 -->
+  <view class="order-info">
+    <view class="info-row">
+      <text class="label">订单编号</text>
+      <text class="value">{{order.orderNo}}</text>
+    </view>
+    <view class="info-row">
+      <text class="label">订单金额</text>
+      <text class="value">¥{{order.totalAmount}}</text>
+    </view>
+  </view>
+
+  <!-- 支付方式 -->
+  <view class="pay-methods">
+    <text class="section-title">选择支付方式</text>
+    <view wx:for="{{payMethods}}" wx:key="id" class="method-item" bindtap="onPayMethodChange" data-index="{{index}}">
+      <view class="method-left">
+        <text class="method-icon icon-{{item.icon}}"></text>
+        <text class="method-name">{{item.name}}</text>
+      </view>
+      <radio checked="{{selectedPayMethod === item.id}}" color="#1989fa" />
+    </view>
+  </view>
+
+  <!-- 底部操作 -->
+  <view class="footer-bar">
+    <button class="pay-btn" bindtap="onPay">确认支付</button>
+    <text class="cancel-btn" bindtap="onCancel">取消</text>
+  </view>
+</view>

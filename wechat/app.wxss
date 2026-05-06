@@ -1,0 +1,113 @@
+/**
+ * 全局样式文件
+ * @联系作者：16768118056
+ * @描述：（此项目非免费分享）源码百分百可用，搞定毕设不发愁，支持远程调试安装、二次开发、定制、讲解、文档类。
+ * @访问：https://www.notmaker.com/detail/8525d865acb24d55890cc81245135363/gtt20260415，查看完整运行演示。
+ */
+
+/* 容器 */
+.container {
+  min-height: 100vh;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 按钮样式 */
+.btn-primary {
+  background-color: #1989fa;
+  color: #fff;
+  border: none;
+  border-radius: 44rpx;
+  font-size: 28rpx;
+  padding: 20rpx 0;
+}
+
+.btn-primary::after {
+  border: none;
+}
+
+.btn-default {
+  background-color: #fff;
+  color: #333;
+  border: 1rpx solid #ddd;
+  border-radius: 44rpx;
+  font-size: 28rpx;
+  padding: 20rpx 0;
+}
+
+/* 价格样式 */
+.price {
+  color: #ee0a24;
+  font-weight: bold;
+}
+
+.price-original {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 24rpx;
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 4rpx 12rpx;
+  border-radius: 4rpx;
+  font-size: 20rpx;
+}
+
+.tag-red {
+  background-color: #fff0f0;
+  color: #ee0a24;
+}
+
+.tag-green {
+  background-color: #f0fff0;
+  color: #07c160;
+}
+
+/* Flex布局 */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 文本省略 */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-ellipsis-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 间距 */
+.mt-10 { margin-top: 10rpx; }
+.mt-20 { margin-top: 20rpx; }
+.mb-10 { margin-bottom: 10rpx; }
+.mb-20 { margin-bottom: 20rpx; }
+.p-20 { padding: 20rpx; }

@@ -1,0 +1,41 @@
+<view class="category-page">
+  <!-- 左侧分类导航 -->
+  <scroll-view class="category-nav" scroll-y>
+    <view
+      wx:for="{{categories}}"
+      wx:key="id"
+      class="category-item {{currentCategory === index ? 'active' : ''}}"
+      bindtap="onCategoryChange"
+      data-index="{{index}}"
+    >
+      {{item.name}}
+    </view>
+  </scroll-view>
+
+  <!-- 右侧商品列表 -->
+  <scroll-view class="category-content" scroll-y>
+    <view class="product-grid">
+      <view
+        wx:for="{{products}}"
+        wx:key="id"
+        class="product-item"
+        bindtap="onProductClick"
+        data-id="{{item.id}}"
+      >
+        <image class="product-image" src="{{item.thumb}}" mode="aspectFill" />
+        <view class="product-info">
+          <text class="product-name">{{item.name}}</text>
+          <text class="product-price">¥{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{loading}}" class="loading">
+      <text>加载中...</text>
+    </view>
+
+    <view wx:if="{{!loading && products.length === 0}}" class="empty">
+      <text>暂无商品</text>
+    </view>
+  </scroll-view>
+</view>

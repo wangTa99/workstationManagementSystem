@@ -1,0 +1,54 @@
+<view class="comment-page">
+  <!-- 评论列表 -->
+  <view class="comment-list">
+    <view wx:for="{{comments}}" wx:key="id" class="comment-item">
+      <!-- 评论头部 -->
+      <view class="comment-header">
+        <image class="avatar" src="{{item.userAvatar || '/assets/default-avatar.png'}}" mode="aspectFill" />
+        <view class="user-info">
+          <text class="nickname">{{item.userName || '匿名用户'}}</text>
+          <view class="star-row">
+            <text class="star-score">{{item.score}}星</text>
+            <text class="comment-time">{{formatTime(item.createTime)}}</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 评论内容 -->
+      <view class="comment-content">
+        <text>{{item.content}}</text>
+      </view>
+
+      <!-- 评论图片 -->
+      <view wx:if="{{item.images && item.images.length > 0}}" class="comment-images">
+        <image
+          wx:for="{{item.images}}"
+          wx:for-item="image"
+          wx:key="index"
+          class="comment-image"
+          src="{{image}}"
+          mode="aspectFill"
+          bindtap="onPreviewImage"
+          data-urls="{{item.images}}"
+          data-url="{{image}}"
+        />
+      </view>
+
+      <!-- 商家回复 -->
+      <view wx:if="{{item.reply}}" class="comment-reply">
+        <text class="reply-label">商家回复：</text>
+        <text class="reply-content">{{item.reply}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:if="{{!loading && comments.length === 0}}" class="empty">
+    <text>暂无评论</text>
+  </view>
+
+  <!-- 加载状态 -->
+  <view wx:if="{{loading}}" class="loading">
+    <text>加载中...</text>
+  </view>
+</view>

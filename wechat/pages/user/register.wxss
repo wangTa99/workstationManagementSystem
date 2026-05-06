@@ -1,0 +1,87 @@
+/**
+ * 注册页面样式
+ * @联系作者：16768118056
+ * @描述：（此项目非免费分享）源码百分百可用，搞定毕设不发愁，支持远程调试安装、二次开发、定制、讲解、文档类。
+ * @访问：https://www.notmaker.com/detail/8525d865acb24d55890cc81245135363/gtt20260415，查看完整运行演示。
+ */
+
+.register-page {
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 40rpx 30rpx;
+}
+
+/* 表单区域 */
+.form-section {
+  padding: 0 20rpx;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #f5f5f5;
+  padding: 30rpx 0;
+}
+
+.form-label {
+  width: 140rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.form-input {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.send-btn {
+  background-color: #1989fa;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 16rpx 24rpx;
+  border-radius: 32rpx;
+  border: none;
+}
+
+.send-btn.disabled {
+  background-color: #ccc;
+}
+
+.send-btn::after {
+  border: none;
+}
+
+/* 用户协议 */
+.agreement-row {
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.agreement-text {
+  font-size: 24rpx;
+  color: #666;
+  margin-left: 10rpx;
+}
+
+.agreement-link {
+  font-size: 24rpx;
+  color: #1989fa;
+}
+
+/* 注册按钮 */
+.register-btn {
+  width: 100%;
+  background-color: #1989fa;
+  color: #fff;
+  font-size: 32rpx;
+  padding: 26rpx 0;
+  border-radius: 44rpx;
+  margin-top: 40rpx;
+  border: none;
+}
+
+.register-btn::after {
+  border: none;
+}

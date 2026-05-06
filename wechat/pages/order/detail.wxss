@@ -1,0 +1,219 @@
+/**
+ * 订单详情页面样式
+ * @联系作者：16768118056
+ * @描述：（此项目非免费分享）源码百分百可用，搞定毕设不发愁，支持远程调试安装、二次开发、定制、讲解、文档类。
+ * @访问：https://www.notmaker.com/detail/8525d865acb24d55890cc81245135363/gtt20260415，查看完整运行演示。
+ */
+
+.order-detail-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding-bottom: 120rpx;
+}
+
+.status-bar {
+  padding: 40rpx 30rpx;
+  color: #fff;
+}
+
+.status-bar.pending { background-color: #ff976a; }
+.status-bar.paid { background-color: #1989fa; }
+.status-bar.shipped { background-color: #07c160; }
+.status-bar.completed { background-color: #999; }
+
+.status-text {
+  display: block;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.status-desc {
+  display: block;
+  font-size: 26rpx;
+  margin-top: 10rpx;
+  opacity: 0.9;
+}
+
+/* 收货地址 */
+.address-card {
+  background-color: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.address-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.consignee, .phone {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.phone {
+  margin-left: 20rpx;
+}
+
+.detail {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+
+/* 卡片通用样式 */
+.card {
+  background-color: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-row .label {
+  font-size: 26rpx;
+  color: #999;
+  width: 140rpx;
+}
+
+.info-row .value {
+  flex: 1;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.info-row .copy {
+  font-size: 24rpx;
+  color: #1989fa;
+}
+
+/* 商品列表 */
+.goods-item {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.goods-item:last-child {
+  margin-bottom: 0;
+}
+
+.goods-image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+  background-color: #f5f5f5;
+}
+
+.goods-info {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.goods-name {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.goods-spec {
+  display: block;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 8rpx;
+}
+
+.goods-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16rpx;
+}
+
+.goods-price {
+  font-size: 28rpx;
+  color: #ee0a24;
+}
+
+.goods-num {
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* 金额信息 */
+.amount-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+}
+
+.amount-row .label {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.amount-row .value {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.amount-row.total {
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #f5f5f5;
+}
+
+.amount-row.total .label {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.amount-row.total .value {
+  font-size: 32rpx;
+  color: #ee0a24;
+  font-weight: bold;
+}
+
+/* 底部操作 */
+.footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20rpx;
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary, .btn-default {
+  padding: 20rpx 40rpx;
+  border-radius: 44rpx;
+  font-size: 28rpx;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #1989fa;
+  color: #fff;
+}
+
+.btn-default {
+  background-color: #fff;
+  color: #666;
+  border: 1rpx solid #ddd;
+}
+
+.btn-primary::after, .btn-default::after {
+  border: none;
+}
