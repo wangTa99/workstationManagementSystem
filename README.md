@@ -204,13 +204,6 @@ http://localhost:8080
 
 > 若部署至服务器，请同步修改 `src/api/axios.js` 中的 `baseURL`。
 
-### 4. 小程序启动
-
-```bash
-# 使用微信开发者工具打开 wechat 目录
-# 修改 utils/api.js 中后端地址
-# 编译运行即可体验
-```
 
 ---
 
